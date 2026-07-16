@@ -12,14 +12,15 @@
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
-    "vite-plugin-pwa": "latest",
     "react": "latest",
     "react-dom": "latest",
     "react-router-dom": "latest",
+    "vite-plugin-pwa": "latest",
     "workbox-window": "latest"
   },
   "devDependencies": {
     "@eslint/js": "latest",
+    "@types/node": "^26.1.1",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "autoprefixer": "latest",

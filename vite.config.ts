@@ -3,7 +3,12 @@ import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 import { appConfig } from './src/config/appConfig'
 
+const githubPagesBase = process.env.GITHUB_PAGES_BASE ?? '/pt-app/'
+const base = process.env.GITHUB_ACTIONS === 'true' ? githubPagesBase : '/'
+const withBase = (path: string) => `${base}${path}`.replace(/\/+/g, '/')
+
 export default defineConfig({
+  base,
   plugins: [
     react(),
     VitePWA({
@@ -17,18 +22,18 @@ export default defineConfig({
         background_color: appConfig.themeColor,
         display: 'standalone',
         orientation: 'portrait',
-        start_url: '/',
-        scope: '/',
+        start_url: base,
+        scope: base,
         icons: [
-          { src: '/icons/icon-192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },
-          { src: '/icons/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any' },
-          { src: '/icons/maskable-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
-          { src: '/icons/icon.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'any maskable' },
+          { src: withBase('icons/icon-192.png'), sizes: '192x192', type: 'image/png', purpose: 'any' },
+          { src: withBase('icons/icon-512.png'), sizes: '512x512', type: 'image/png', purpose: 'any' },
+          { src: withBase('icons/maskable-512.png'), sizes: '512x512', type: 'image/png', purpose: 'maskable' },
+          { src: withBase('icons/icon.svg'), sizes: 'any', type: 'image/svg+xml', purpose: 'any maskable' },
         ],
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,json,ico,webmanifest}'],
-        navigateFallback: '/index.html',
+        navigateFallback: withBase('index.html'),
       },
       devOptions: { enabled: true },
     }),
