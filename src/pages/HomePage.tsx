@@ -14,7 +14,7 @@ export function HomePage() {
       <header className="space-y-3 pt-2">
         <p className="font-display text-xs font-bold uppercase tracking-[0.35em] text-neon">Mobile Cyber Study PWA</p>
         <h1 className="font-display text-4xl font-black leading-none text-white sm:text-5xl">PenTest+ Battle Deck</h1>
-        <p className="max-w-xl text-sm leading-relaxed text-slate-300">An installable Android-first study deck with interactive multiple-choice cards, Nmap commands, scenario questions, and exam-day memory hooks.</p>
+        <p className="max-w-xl text-sm leading-relaxed text-slate-300">An installable Android-first study deck with multiple-choice drills, fill-in-the-blank recall, situational condition tests, commands, and exam-day memory hooks.</p>
       </header>
 
       <section className="rounded-[2rem] border border-neon/30 bg-panel/90 p-5 shadow-neon">
@@ -28,7 +28,7 @@ export function HomePage() {
 
       <section className="grid gap-3 sm:grid-cols-2">
         <QuickCard title="Learn" body="Command meaning, use case, memory hook, and exam trap." to="/learn" />
-        <QuickCard title="Practice" body="Multiple-choice cards reveal feedback, traps, and swipe-based review." to="/practice" />
+        <QuickCard title="Practice" body="Answer choices, type missing terms, and work scenario cards with swipe-based review." to="/practice" />
         <QuickCard title="Builder" body="Command chip challenge workspace placeholder for Phase 4." to="/builder" />
         <QuickCard title="Exam Cram" body="Fast review lane will focus on missed and high-yield cards." to="/progress" />
       </section>

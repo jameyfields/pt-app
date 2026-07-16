@@ -19,7 +19,8 @@
       "-O",
       "-sn",
       "-Pn"
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "nmap-002",
@@ -41,7 +42,8 @@
       "TCP connect scan with -sT",
       "UDP scan with -sU",
       "Ping sweep with -sn"
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "recon-001",
@@ -63,7 +65,8 @@
       "whois",
       "chmod",
       "hydra"
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "recon-002",
@@ -85,7 +88,8 @@
       "Packet capture and protocol decoding.",
       "Password hash cracking.",
       "Wireless deauthentication."
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "web-001",
@@ -107,7 +111,8 @@
       "CSRF",
       "SSRF",
       "Clickjacking"
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "web-002",
@@ -129,7 +134,8 @@
       "Stored XSS only affects databases, while reflected XSS only affects files.",
       "Reflected XSS requires admin access; stored XSS does not.",
       "There is no practical difference."
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "ad-001",
@@ -151,7 +157,8 @@
       "Dumping local SAM hashes from a Linux host.",
       "Creating rogue DHCP responses.",
       "Abusing a user browser session."
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "ad-002",
@@ -173,7 +180,8 @@
       "The account has an SPN configured.",
       "The domain uses DNSSEC.",
       "The user is in the local Docker group."
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "cloud-001",
@@ -195,7 +203,8 @@
       "docker-compose.yml",
       "kubeconfig",
       "package-lock.json"
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "cloud-002",
@@ -217,7 +226,8 @@
       "They make DNS records resolve slower.",
       "They prevent all logging by default.",
       "They only affect on-prem Windows servers."
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "report-001",
@@ -239,7 +249,8 @@
       "Every raw packet and exploit payload first.",
       "Only screenshots with no context.",
       "A list of scanner plugin IDs with no priority."
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "report-002",
@@ -261,7 +272,8 @@
       "Only the tool name used to scan.",
       "Only a CVSS number with no affected host.",
       "A vague statement that something is insecure."
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "wireless-001",
@@ -283,7 +295,8 @@
       "A duplicate Active Directory domain controller.",
       "A malicious Docker container image.",
       "A DNS record with two A values."
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "wireless-002",
@@ -305,7 +318,8 @@
       "Scanning every TCP port on a host.",
       "Encoding a payload with Base64.",
       "Cracking a WPA handshake offline."
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "script-001",
@@ -327,7 +341,8 @@
       "Deletes the script file.",
       "Changes ownership to root.",
       "Prints the script contents."
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "script-002",
@@ -349,7 +364,8 @@
       "The full HTML body only.",
       "The DNS MX record.",
       "The TLS private key."
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "nmap-003",
@@ -371,7 +387,8 @@
       "nmap",
       "host-discovery",
       "firewall"
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "nmap-004",
@@ -393,7 +410,8 @@
       "nmap",
       "reporting",
       "output"
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "nmap-005",
@@ -415,7 +433,8 @@
       "nmap",
       "enumeration",
       "os-detection"
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "recon-003",
@@ -437,7 +456,8 @@
       "packets",
       "network",
       "traffic-analysis"
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "recon-004",
@@ -459,7 +479,8 @@
       "osint",
       "internet-exposure",
       "banners"
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "recon-005",
@@ -481,7 +502,8 @@
       "dns",
       "email",
       "recon"
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "web-003",
@@ -503,7 +525,8 @@
       "csrf",
       "web",
       "session"
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "web-004",
@@ -525,7 +548,8 @@
       "ssrf",
       "web",
       "cloud"
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "web-005",
@@ -547,7 +571,8 @@
       "sqli",
       "defense",
       "secure-coding"
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "web-006",
@@ -569,7 +594,8 @@
       "lfi",
       "path-traversal",
       "web"
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "ad-003",
@@ -591,7 +617,8 @@
       "ntlm",
       "lateral-movement",
       "credentials"
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "ad-004",
@@ -613,7 +640,8 @@
       "spn",
       "kerberos",
       "active-directory"
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "ad-005",
@@ -635,7 +663,8 @@
       "bloodhound",
       "active-directory",
       "attack-paths"
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "cloud-003",
@@ -657,7 +686,8 @@
       "cloud",
       "ssrf",
       "metadata"
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "cloud-004",
@@ -679,7 +709,8 @@
       "kubernetes",
       "credentials",
       "containers"
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "cloud-005",
@@ -701,7 +732,8 @@
       "docker",
       "containers",
       "commands"
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "report-003",
@@ -723,7 +755,8 @@
       "reporting",
       "remediation",
       "communication"
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "report-004",
@@ -745,7 +778,8 @@
       "scope",
       "rules-of-engagement",
       "planning"
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "wireless-003",
@@ -767,7 +801,8 @@
       "wireless",
       "wpa",
       "hash-cracking"
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "wireless-004",
@@ -789,7 +824,8 @@
       "physical-security",
       "social-engineering",
       "awareness"
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "script-003",
@@ -811,7 +847,8 @@
       "bash",
       "grep",
       "code-reading"
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "script-004",
@@ -833,7 +870,8 @@
       "secure-coding",
       "python",
       "code-execution"
-    ]
+    ],
+    "questionType": "multiple-choice"
   },
   {
     "id": "script-005",
@@ -855,6 +893,361 @@
       "http",
       "status-codes",
       "web"
+    ],
+    "questionType": "multiple-choice"
+  },
+  {
+    "id": "fill-001",
+    "category": "Nmap",
+    "difficulty": "Easy",
+    "questionType": "fill-blank",
+    "frontPrompt": "Fill in the blank: Use Nmap _____ to scan all 65,535 TCP ports.",
+    "answer": "-p-",
+    "acceptedAnswers": [
+      "-p-",
+      "p-",
+      "nmap -p-"
+    ],
+    "explanation": "-p- tells Nmap to scan every TCP port instead of the default top ports.",
+    "command": "nmap -p- 10.10.10.25",
+    "memoryHook": "Dash p dash = ports from start to finish.",
+    "examTrap": "-A is aggressive detection; it does not mean all ports.",
+    "tags": [
+      "nmap",
+      "ports",
+      "fill-blank"
+    ]
+  },
+  {
+    "id": "fill-002",
+    "category": "Recon Tools",
+    "difficulty": "Easy",
+    "questionType": "fill-blank",
+    "frontPrompt": "Fill in the blank: The DNS record type that identifies mail servers is _____.",
+    "answer": "MX",
+    "acceptedAnswers": [
+      "MX",
+      "mx",
+      "mail exchanger",
+      "mail exchange"
+    ],
+    "explanation": "MX records identify the mail exchangers for a domain.",
+    "command": "dig example.com MX +short",
+    "memoryHook": "MX = mail exchange.",
+    "examTrap": "TXT records can hold SPF/DMARC, but MX points to mail servers.",
+    "tags": [
+      "dns",
+      "email",
+      "fill-blank"
+    ]
+  },
+  {
+    "id": "fill-003",
+    "category": "Web Attacks",
+    "difficulty": "Medium",
+    "questionType": "fill-blank",
+    "frontPrompt": "Fill in the blank: The safest defense against SQL injection is using _____ queries/statements.",
+    "answer": "parameterized",
+    "acceptedAnswers": [
+      "parameterized",
+      "prepared",
+      "prepared statements",
+      "parameterized queries"
+    ],
+    "explanation": "Parameterized/prepared statements separate code from data so input cannot change query structure.",
+    "command": "SELECT * FROM users WHERE email = ?",
+    "memoryHook": "Parameters put user input in a sealed container.",
+    "examTrap": "Input filtering alone is weaker and easier to bypass.",
+    "tags": [
+      "sqli",
+      "defense",
+      "fill-blank"
+    ]
+  },
+  {
+    "id": "fill-004",
+    "category": "AD/Kerberos",
+    "difficulty": "Medium",
+    "questionType": "fill-blank",
+    "frontPrompt": "Fill in the blank: AS-REP roasting requires Kerberos pre-authentication to be _____.",
+    "answer": "disabled",
+    "acceptedAnswers": [
+      "disabled",
+      "off",
+      "turned off",
+      "not required"
+    ],
+    "explanation": "If pre-authentication is disabled, an attacker can request AS-REP data and crack it offline.",
+    "command": "GetNPUsers.py domain.local/ -usersfile users.txt -no-pass",
+    "memoryHook": "No pre-auth = roastable AS-REP.",
+    "examTrap": "An SPN is the Kerberoasting condition, not AS-REP roasting.",
+    "tags": [
+      "kerberos",
+      "asrep",
+      "fill-blank"
+    ]
+  },
+  {
+    "id": "fill-005",
+    "category": "Cloud/Containers",
+    "difficulty": "Medium",
+    "questionType": "fill-blank",
+    "frontPrompt": "Fill in the blank: A cloud permission model should follow the principle of _____.",
+    "answer": "least privilege",
+    "acceptedAnswers": [
+      "least privilege",
+      "least-privilege",
+      "minimum privilege",
+      "minimal privilege"
+    ],
+    "explanation": "Least privilege grants only the access required for the job, reducing blast radius.",
+    "command": "N/A",
+    "memoryHook": "Give the smallest key that opens the needed door.",
+    "examTrap": "Network segmentation does not fix overly broad identity permissions.",
+    "tags": [
+      "cloud",
+      "iam",
+      "fill-blank"
+    ]
+  },
+  {
+    "id": "fill-006",
+    "category": "Reporting/Documents",
+    "difficulty": "Easy",
+    "questionType": "fill-blank",
+    "frontPrompt": "Fill in the blank: A finding should include affected asset, proof, impact, and _____.",
+    "answer": "remediation",
+    "acceptedAnswers": [
+      "remediation",
+      "fix",
+      "mitigation",
+      "recommendation",
+      "remediation guidance"
+    ],
+    "explanation": "A complete finding explains how to verify and fix the issue, not just that it exists.",
+    "command": "N/A",
+    "memoryHook": "Proof without a fix is just a scary screenshot.",
+    "examTrap": "Raw scanner output alone is not a finished report finding.",
+    "tags": [
+      "reporting",
+      "remediation",
+      "fill-blank"
+    ]
+  },
+  {
+    "id": "scenario-001",
+    "category": "Nmap",
+    "difficulty": "Medium",
+    "questionType": "scenario",
+    "frontPrompt": "A host is known to be online, but ping sweeps show it as down. What Nmap option should you try next?",
+    "answer": "Use -Pn to skip host discovery and scan it as online.",
+    "choices": [
+      "Use -Pn to skip host discovery and scan it as online.",
+      "Use -sn only and stop there.",
+      "Use -oX to force the host online.",
+      "Use -F to disable firewalls."
+    ],
+    "scenario": {
+      "condition": "ICMP/host discovery appears blocked, but the target is in scope and believed online.",
+      "bestAction": "Run an authorized scan with -Pn so Nmap does not require ping discovery first."
+    },
+    "explanation": "-Pn bypasses host discovery and proceeds with port scanning, useful when ping is blocked.",
+    "command": "nmap -Pn -sV 10.10.10.25",
+    "memoryHook": "Ping blocked? Pn says proceed now.",
+    "examTrap": "-sn is host discovery only and will not enumerate ports.",
+    "tags": [
+      "nmap",
+      "situational",
+      "firewall"
+    ]
+  },
+  {
+    "id": "scenario-002",
+    "category": "Recon Tools",
+    "difficulty": "Medium",
+    "questionType": "scenario",
+    "frontPrompt": "You need to find hidden web directories without exploiting anything. Which approach fits best?",
+    "answer": "Run content discovery with ffuf or Gobuster using an approved wordlist.",
+    "choices": [
+      "Run content discovery with ffuf or Gobuster using an approved wordlist.",
+      "Start password spraying domain users.",
+      "Launch a deauthentication attack.",
+      "Dump LSASS memory."
+    ],
+    "scenario": {
+      "condition": "Authorized web recon needs hidden paths or files identified safely.",
+      "bestAction": "Use a directory/file fuzzing tool and keep rate limits within rules of engagement."
+    },
+    "explanation": "ffuf/Gobuster enumerate paths; they are recon tools, not direct exploit tools.",
+    "command": "ffuf -w words.txt -u https://target/FUZZ",
+    "memoryHook": "FUZZ replaces the blank in the URL.",
+    "examTrap": "Directory discovery is not the same as vulnerability exploitation.",
+    "tags": [
+      "web-recon",
+      "situational",
+      "ffuf"
+    ]
+  },
+  {
+    "id": "scenario-003",
+    "category": "Web Attacks",
+    "difficulty": "Medium",
+    "questionType": "scenario",
+    "frontPrompt": "A profile page stores your script and executes it for every visitor. What vulnerability is this?",
+    "answer": "Stored XSS",
+    "choices": [
+      "Stored XSS",
+      "Reflected XSS",
+      "CSRF",
+      "SSRF"
+    ],
+    "scenario": {
+      "condition": "Malicious input is saved by the application and served later to other users.",
+      "bestAction": "Identify it as stored XSS and recommend output encoding plus input validation/context-aware sanitization."
+    },
+    "explanation": "Stored XSS persists in the app and triggers when users view affected content.",
+    "command": "<script>alert(document.domain)</script>",
+    "memoryHook": "Stored sticks. Reflected bounces.",
+    "examTrap": "CSRF abuses a victim action; it does not require stored script execution.",
+    "tags": [
+      "xss",
+      "situational",
+      "web"
+    ]
+  },
+  {
+    "id": "scenario-004",
+    "category": "AD/Kerberos",
+    "difficulty": "Hard",
+    "questionType": "scenario",
+    "frontPrompt": "You have a valid domain user and find service accounts with SPNs. Which attack condition does this suggest?",
+    "answer": "Kerberoasting",
+    "choices": [
+      "Kerberoasting",
+      "AS-REP roasting",
+      "Pass-the-hash against local SAM only",
+      "Evil twin"
+    ],
+    "scenario": {
+      "condition": "Authenticated domain access plus SPN-backed service accounts are present.",
+      "bestAction": "Request service tickets for in-scope SPNs and assess offline crackability if permitted."
+    },
+    "explanation": "Kerberoasting targets service tickets for SPN accounts, often cracking weak service account passwords offline.",
+    "command": "GetUserSPNs.py domain/user:password -request",
+    "memoryHook": "SPN service tickets get roasted.",
+    "examTrap": "AS-REP roasting depends on disabled pre-authentication, not SPNs.",
+    "tags": [
+      "kerberos",
+      "situational",
+      "active-directory"
+    ]
+  },
+  {
+    "id": "scenario-005",
+    "category": "Cloud/Containers",
+    "difficulty": "Medium",
+    "questionType": "scenario",
+    "frontPrompt": "An IAM policy allows s3:* on every bucket for a basic app role. What is the main risk?",
+    "answer": "Excessive permissions increase blast radius and may expose or modify unauthorized data.",
+    "choices": [
+      "Excessive permissions increase blast radius and may expose or modify unauthorized data.",
+      "The app will stop resolving DNS records.",
+      "TLS certificates are automatically revoked.",
+      "Only local Windows passwords are affected."
+    ],
+    "scenario": {
+      "condition": "A cloud identity has broad permissions beyond its business need.",
+      "bestAction": "Recommend least privilege scoped to required buckets and actions, then validate with policy review/testing."
+    },
+    "explanation": "Overly broad IAM permissions can turn one compromised role into many compromised resources.",
+    "command": "aws iam simulate-principal-policy --policy-source-arn ARN --action-names s3:ListAllMyBuckets",
+    "memoryHook": "Wide permissions make wide damage.",
+    "examTrap": "Firewall rules do not replace identity least privilege.",
+    "tags": [
+      "cloud",
+      "iam",
+      "situational"
+    ]
+  },
+  {
+    "id": "scenario-006",
+    "category": "Wireless/Social Engineering",
+    "difficulty": "Medium",
+    "questionType": "scenario",
+    "frontPrompt": "Users report a stronger Wi-Fi network with the same SSID near the lobby asking for credentials. What test finding fits?",
+    "answer": "Evil twin / rogue access point attack",
+    "choices": [
+      "Evil twin / rogue access point attack",
+      "Kerberoasting",
+      "SQL injection",
+      "DNS zone transfer"
+    ],
+    "scenario": {
+      "condition": "A lookalike wireless network impersonates a legitimate SSID and prompts users for credentials.",
+      "bestAction": "Document rogue AP risk and recommend wireless monitoring, certificate validation, and user awareness controls."
+    },
+    "explanation": "An evil twin impersonates a known Wi-Fi network to capture traffic or credentials.",
+    "command": "N/A",
+    "memoryHook": "Evil twin = Wi-Fi lookalike villain.",
+    "examTrap": "Matching SSID is not proof of legitimacy.",
+    "tags": [
+      "wireless",
+      "situational",
+      "rogue-ap"
+    ]
+  },
+  {
+    "id": "scenario-007",
+    "category": "Reporting/Documents",
+    "difficulty": "Easy",
+    "questionType": "scenario",
+    "frontPrompt": "A principal wants the top risks and what to fix first, not raw exploit output. Which report section is best?",
+    "answer": "Executive summary",
+    "choices": [
+      "Executive summary",
+      "Raw scanner appendix",
+      "Payload dump",
+      "Terminal transcript"
+    ],
+    "scenario": {
+      "condition": "Non-technical leadership needs decision-ready risk and priorities.",
+      "bestAction": "Use the executive summary to explain business impact, priority, and recommended next steps."
+    },
+    "explanation": "Executive summaries translate technical findings into business risk and action.",
+    "command": "N/A",
+    "memoryHook": "Executives need risk, impact, next moves.",
+    "examTrap": "Do not lead non-technical readers with exploit code.",
+    "tags": [
+      "reporting",
+      "situational",
+      "communication"
+    ]
+  },
+  {
+    "id": "scenario-008",
+    "category": "Scripting/Code Interpretation",
+    "difficulty": "Medium",
+    "questionType": "scenario",
+    "frontPrompt": "A script checks `requests.get(url).status_code == 200` before continuing. What condition is it testing?",
+    "answer": "Whether the HTTP response returned status code 200 OK.",
+    "choices": [
+      "Whether the HTTP response returned status code 200 OK.",
+      "Whether DNS MX records exist.",
+      "Whether the TLS private key is exposed.",
+      "Whether a password hash was cracked."
+    ],
+    "scenario": {
+      "condition": "Python code compares a requests Response status_code value to 200.",
+      "bestAction": "Interpret it as an HTTP availability/success check, while noting content and auth still need validation."
+    },
+    "explanation": "status_code is the numeric HTTP response code; 200 commonly means OK.",
+    "command": "python -c \"import requests; print(requests.get('https://example.com').status_code)\"",
+    "memoryHook": "status_code is the HTTP number.",
+    "examTrap": "A 200 response does not prove authorization or content safety.",
+    "tags": [
+      "python",
+      "situational",
+      "code-reading"
     ]
   }
 ]

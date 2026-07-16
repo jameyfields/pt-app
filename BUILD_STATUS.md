@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Phase 3 — Interactive Practice mode and expanded starter deck.
+Phase 3.5 — Mixed review modes: multiple choice, fill-in-the-blank, and situational condition tests.
 
 ## Phase checklist
 
@@ -12,6 +12,7 @@ Phase 3 — Interactive Practice mode and expanded starter deck.
 - [x] Phase 1: Add `npm run test` and initial automated checks.
 - [x] Phase 2: Create the expanded card schema and 39-card sample deck.
 - [x] Phase 3: Build interactive Learn and Practice card modes.
+- [x] Phase 3.5: Add mixed review question types and mobile-friendly typed-answer/scenario cards.
 - [ ] Phase 4: Build Command Builder.
 - [ ] Phase 5: Add progress tracking and spaced repetition.
 - [ ] Phase 6: Expand to at least 50 original Nmap cards.
@@ -19,7 +20,7 @@ Phase 3 — Interactive Practice mode and expanded starter deck.
 
 ## Last verified commands
 
-Verified successfully for interactive deck expansion:
+Verified successfully for mixed review modes:
 
 ```bash
 npm run test

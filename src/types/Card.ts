@@ -1,5 +1,7 @@
 export type Difficulty = 'Easy' | 'Medium' | 'Hard'
 
+export type QuestionType = 'multiple-choice' | 'fill-blank' | 'scenario' | 'flashcard'
+
 export type CardCategory =
   | 'Nmap'
   | 'Recon Tools'
@@ -10,13 +12,21 @@ export type CardCategory =
   | 'Wireless/Social Engineering'
   | 'Scripting/Code Interpretation'
 
+export interface ScenarioCondition {
+  condition: string
+  bestAction: string
+}
+
 export interface BattleCard {
   id: string
   category: CardCategory
   difficulty: Difficulty
+  questionType?: QuestionType
   frontPrompt: string
   answer: string
   choices?: string[]
+  acceptedAnswers?: string[]
+  scenario?: ScenarioCondition
   explanation: string
   command?: string
   memoryHook: string

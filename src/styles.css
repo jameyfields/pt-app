@@ -38,4 +38,5 @@ button, a { touch-action: manipulation; }
   .chip-active { @apply border-neon bg-neon/15 text-neon shadow-neon; }
   .action-button { @apply min-h-12 rounded-2xl border px-4 py-4 text-sm font-black uppercase tracking-wider transition active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neon; }
   .choice-button { @apply flex min-h-14 w-full items-center gap-3 rounded-2xl border border-white/10 bg-white/[.04] px-3 py-3 text-left text-sm font-bold leading-snug text-slate-100 transition hover:border-neon/50 hover:bg-neon/10 active:scale-[.99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neon; }
+  .answer-input { @apply min-h-14 w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-base font-bold text-white placeholder:text-slate-500 focus:border-neon focus:outline-none focus:ring-2 focus:ring-neon/30; }
 }
