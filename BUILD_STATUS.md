@@ -35,7 +35,7 @@ dist/sw.js
 dist/icons/icon-192.png
 dist/icons/icon-512.png
 dist/icons/maskable-512.png
-dist/offline.html
+dist/404.html
 ```
 
 ## Notes

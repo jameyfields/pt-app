@@ -6,7 +6,7 @@
 - Added optional multiple-choice answers to the card schema.
 - Turned Practice mode into an interactive answer-pick flow with immediate correct/trap feedback before the explanation.
 - Added per-card correct/review counters on the card face and updated the mobile copy for the new flow.
-- Verified tests, lint, production GitHub Pages build, manifest, service worker, and required PWA icons.
+- Verified tests, lint, production GitHub Pages build, SPA 404 fallback, manifest, service worker, and required PWA icons.
 
 ## 0.1.1 - GitHub Pages deployment
 
