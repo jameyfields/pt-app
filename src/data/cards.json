@@ -9,7 +9,17 @@
     "command": "nmap -sV 10.10.10.10",
     "memoryHook": "V means version.",
     "examTrap": "-O is OS detection. It does not identify service versions.",
-    "tags": ["nmap", "enumeration", "services"]
+    "tags": [
+      "nmap",
+      "enumeration",
+      "services"
+    ],
+    "choices": [
+      "-sV",
+      "-O",
+      "-sn",
+      "-Pn"
+    ]
   },
   {
     "id": "nmap-002",
@@ -21,7 +31,17 @@
     "command": "sudo nmap -sS 192.168.1.0/24",
     "memoryHook": "SYN scan = stealthier half-open scan.",
     "examTrap": "-sT is a full TCP connect scan and is noisier.",
-    "tags": ["nmap", "tcp", "scan-types"]
+    "tags": [
+      "nmap",
+      "tcp",
+      "scan-types"
+    ],
+    "choices": [
+      "SYN scan with -sS",
+      "TCP connect scan with -sT",
+      "UDP scan with -sU",
+      "Ping sweep with -sn"
+    ]
   },
   {
     "id": "recon-001",
@@ -33,7 +53,17 @@
     "command": "dig example.com MX +short",
     "memoryHook": "dig digs up DNS records.",
     "examTrap": "whois identifies registration data; it is not a DNS record query tool.",
-    "tags": ["dns", "recon", "osint"]
+    "tags": [
+      "dns",
+      "recon",
+      "osint"
+    ],
+    "choices": [
+      "dig",
+      "whois",
+      "chmod",
+      "hydra"
+    ]
   },
   {
     "id": "recon-002",
@@ -45,7 +75,17 @@
     "command": "ffuf -w words.txt -u https://target/FUZZ",
     "memoryHook": "Fuzzing = replace FUZZ with guesses.",
     "examTrap": "They do not exploit vulnerabilities by themselves; they enumerate attack surface.",
-    "tags": ["ffuf", "gobuster", "web-recon"]
+    "tags": [
+      "ffuf",
+      "gobuster",
+      "web-recon"
+    ],
+    "choices": [
+      "Directory, file, virtual host, and parameter discovery by wordlist fuzzing.",
+      "Packet capture and protocol decoding.",
+      "Password hash cracking.",
+      "Wireless deauthentication."
+    ]
   },
   {
     "id": "web-001",
@@ -57,7 +97,17 @@
     "command": "' OR '1'='1",
     "memoryHook": "Input becomes query = trouble.",
     "examTrap": "Escaping can help, but prepared statements/parameterized queries are the preferred defense.",
-    "tags": ["sqli", "web", "owasp"]
+    "tags": [
+      "sqli",
+      "web",
+      "owasp"
+    ],
+    "choices": [
+      "SQL injection",
+      "CSRF",
+      "SSRF",
+      "Clickjacking"
+    ]
   },
   {
     "id": "web-002",
@@ -69,7 +119,17 @@
     "command": "<script>alert(document.domain)</script>",
     "memoryHook": "Stored sticks. Reflected bounces.",
     "examTrap": "HttpOnly cookies reduce cookie theft but do not eliminate all XSS impact.",
-    "tags": ["xss", "web", "owasp"]
+    "tags": [
+      "xss",
+      "web",
+      "owasp"
+    ],
+    "choices": [
+      "Reflected XSS returns immediately in a response; stored XSS is saved by the app and served later to users.",
+      "Stored XSS only affects databases, while reflected XSS only affects files.",
+      "Reflected XSS requires admin access; stored XSS does not.",
+      "There is no practical difference."
+    ]
   },
   {
     "id": "ad-001",
@@ -81,7 +141,17 @@
     "command": "GetUserSPNs.py domain/user:password -dc-ip 10.0.0.5 -request",
     "memoryHook": "Roast the service ticket, not the DC.",
     "examTrap": "Kerberoasting does not require domain admin privileges to request tickets.",
-    "tags": ["kerberos", "active-directory", "hash-cracking"]
+    "tags": [
+      "kerberos",
+      "active-directory",
+      "hash-cracking"
+    ],
+    "choices": [
+      "Requesting service tickets for SPN accounts and attempting to crack the ticket hash offline.",
+      "Dumping local SAM hashes from a Linux host.",
+      "Creating rogue DHCP responses.",
+      "Abusing a user browser session."
+    ]
   },
   {
     "id": "ad-002",
@@ -93,7 +163,17 @@
     "command": "GetNPUsers.py domain.local/ -usersfile users.txt -dc-ip 10.0.0.5 -no-pass",
     "memoryHook": "No pre-auth = AS-REP hash snack.",
     "examTrap": "This is different from Kerberoasting, which targets SPN service tickets.",
-    "tags": ["kerberos", "asrep", "active-directory"]
+    "tags": [
+      "kerberos",
+      "asrep",
+      "active-directory"
+    ],
+    "choices": [
+      "An account has Kerberos pre-authentication disabled.",
+      "The account has an SPN configured.",
+      "The domain uses DNSSEC.",
+      "The user is in the local Docker group."
+    ]
   },
   {
     "id": "cloud-001",
@@ -105,7 +185,17 @@
     "command": "docker build -t app:latest .",
     "memoryHook": "Dockerfile builds the box.",
     "examTrap": "docker-compose.yml orchestrates services; it is not the image build recipe itself.",
-    "tags": ["docker", "containers", "build"]
+    "tags": [
+      "docker",
+      "containers",
+      "build"
+    ],
+    "choices": [
+      "Dockerfile",
+      "docker-compose.yml",
+      "kubeconfig",
+      "package-lock.json"
+    ]
   },
   {
     "id": "cloud-002",
@@ -117,7 +207,17 @@
     "command": "aws iam get-policy-version --policy-arn ARN --version-id v1",
     "memoryHook": "IAM is the keys to the cloud kingdom.",
     "examTrap": "Network firewalls do not compensate for identity permissions that are too broad.",
-    "tags": ["cloud", "iam", "least-privilege"]
+    "tags": [
+      "cloud",
+      "iam",
+      "least-privilege"
+    ],
+    "choices": [
+      "They expand blast radius and can allow privilege escalation or unauthorized data access.",
+      "They make DNS records resolve slower.",
+      "They prevent all logging by default.",
+      "They only affect on-prem Windows servers."
+    ]
   },
   {
     "id": "report-001",
@@ -129,7 +229,17 @@
     "command": "N/A",
     "memoryHook": "Executives need risk, impact, and next moves.",
     "examTrap": "Do not lead with exploit code in the executive summary.",
-    "tags": ["reporting", "risk", "communication"]
+    "tags": [
+      "reporting",
+      "risk",
+      "communication"
+    ],
+    "choices": [
+      "Business risk, high-level impact, and prioritized recommendations without deep technical overload.",
+      "Every raw packet and exploit payload first.",
+      "Only screenshots with no context.",
+      "A list of scanner plugin IDs with no priority."
+    ]
   },
   {
     "id": "report-002",
@@ -141,7 +251,17 @@
     "command": "N/A",
     "memoryHook": "Asset, proof, impact, fix.",
     "examTrap": "Raw scanner output alone is not a complete finding.",
-    "tags": ["reporting", "evidence", "remediation"]
+    "tags": [
+      "reporting",
+      "evidence",
+      "remediation"
+    ],
+    "choices": [
+      "Affected asset, reproduction steps, screenshots or logs, impact, risk rating, and remediation guidance.",
+      "Only the tool name used to scan.",
+      "Only a CVSS number with no affected host.",
+      "A vague statement that something is insecure."
+    ]
   },
   {
     "id": "wireless-001",
@@ -153,7 +273,17 @@
     "command": "N/A",
     "memoryHook": "Evil twin = Wi-Fi lookalike villain.",
     "examTrap": "A strong SSID match alone does not prove the AP is legitimate.",
-    "tags": ["wireless", "rogue-ap", "social-engineering"]
+    "tags": [
+      "wireless",
+      "rogue-ap",
+      "social-engineering"
+    ],
+    "choices": [
+      "A rogue access point that impersonates a legitimate wireless network to capture traffic or credentials.",
+      "A duplicate Active Directory domain controller.",
+      "A malicious Docker container image.",
+      "A DNS record with two A values."
+    ]
   },
   {
     "id": "wireless-002",
@@ -165,7 +295,17 @@
     "command": "N/A",
     "memoryHook": "Pretext = pretend context.",
     "examTrap": "Pretexting is not the same as phishing email, though phishing may use a pretext.",
-    "tags": ["social-engineering", "pretext", "awareness"]
+    "tags": [
+      "social-engineering",
+      "pretext",
+      "awareness"
+    ],
+    "choices": [
+      "Creating a believable scenario or identity to persuade a target to share information or take action.",
+      "Scanning every TCP port on a host.",
+      "Encoding a payload with Base64.",
+      "Cracking a WPA handshake offline."
+    ]
   },
   {
     "id": "script-001",
@@ -177,7 +317,17 @@
     "command": "chmod +x script.sh && ./script.sh",
     "memoryHook": "+x = can execute.",
     "examTrap": "Execute permission does not guarantee the script is safe or syntactically correct.",
-    "tags": ["bash", "permissions", "linux"]
+    "tags": [
+      "bash",
+      "permissions",
+      "linux"
+    ],
+    "choices": [
+      "Adds execute permission to the script file.",
+      "Deletes the script file.",
+      "Changes ownership to root.",
+      "Prints the script contents."
+    ]
   },
   {
     "id": "script-002",
@@ -189,6 +339,522 @@
     "command": "python -c \"import requests; print(requests.get('https://example.com').status_code)\"",
     "memoryHook": "Response dot status_code = HTTP number.",
     "examTrap": "A 200 status does not prove the page content is safe or authenticated correctly.",
-    "tags": ["python", "http", "code-reading"]
+    "tags": [
+      "python",
+      "http",
+      "code-reading"
+    ],
+    "choices": [
+      "The HTTP response status code, such as 200, 301, 403, or 404.",
+      "The full HTML body only.",
+      "The DNS MX record.",
+      "The TLS private key."
+    ]
+  },
+  {
+    "id": "nmap-003",
+    "category": "Nmap",
+    "difficulty": "Easy",
+    "frontPrompt": "Which Nmap option skips host discovery and treats hosts as online?",
+    "answer": "-Pn",
+    "choices": [
+      "-Pn",
+      "-sn",
+      "-A",
+      "-oA"
+    ],
+    "explanation": "-Pn disables ping/host discovery and proceeds with scanning, useful when ICMP is blocked.",
+    "command": "nmap -Pn 10.10.10.25",
+    "memoryHook": "Pn = ping? nah.",
+    "examTrap": "-sn performs ping scan/host discovery only; it does not skip discovery.",
+    "tags": [
+      "nmap",
+      "host-discovery",
+      "firewall"
+    ]
+  },
+  {
+    "id": "nmap-004",
+    "category": "Nmap",
+    "difficulty": "Medium",
+    "frontPrompt": "Which Nmap option saves output in all major formats at once?",
+    "answer": "-oA",
+    "choices": [
+      "-oA",
+      "-oN",
+      "-oX",
+      "-v"
+    ],
+    "explanation": "-oA writes normal, grepable, and XML outputs using the same base filename.",
+    "command": "nmap -sV -oA scans/web01 10.10.10.25",
+    "memoryHook": "A = all output formats.",
+    "examTrap": "-oN is normal output only, and -oX is XML only.",
+    "tags": [
+      "nmap",
+      "reporting",
+      "output"
+    ]
+  },
+  {
+    "id": "nmap-005",
+    "category": "Nmap",
+    "difficulty": "Hard",
+    "frontPrompt": "What does Nmap's -A option enable?",
+    "answer": "Aggressive detection: OS detection, version detection, script scanning, and traceroute.",
+    "choices": [
+      "Aggressive detection: OS detection, version detection, script scanning, and traceroute.",
+      "All TCP and UDP ports with no timing limits.",
+      "Anonymous FTP login testing only.",
+      "ARP-only host discovery."
+    ],
+    "explanation": "-A bundles several noisy enumeration features. It is useful, but not stealthy.",
+    "command": "nmap -A 10.10.10.25",
+    "memoryHook": "A = aggressive, not anonymous.",
+    "examTrap": "-A does not automatically scan every port; use -p- for all TCP ports.",
+    "tags": [
+      "nmap",
+      "enumeration",
+      "os-detection"
+    ]
+  },
+  {
+    "id": "recon-003",
+    "category": "Recon Tools",
+    "difficulty": "Easy",
+    "frontPrompt": "Which Linux tool is best for capturing and reading packets in a terminal?",
+    "answer": "tcpdump",
+    "choices": [
+      "tcpdump",
+      "nikto",
+      "hashcat",
+      "john"
+    ],
+    "explanation": "tcpdump captures packets from an interface and can filter traffic with BPF syntax.",
+    "command": "sudo tcpdump -i eth0 host 10.10.10.5",
+    "memoryHook": "tcpdump dumps TCP/IP traffic.",
+    "examTrap": "Wireshark is GUI-focused; tcpdump is the common CLI capture tool.",
+    "tags": [
+      "packets",
+      "network",
+      "traffic-analysis"
+    ]
+  },
+  {
+    "id": "recon-004",
+    "category": "Recon Tools",
+    "difficulty": "Medium",
+    "frontPrompt": "What is Shodan primarily used for?",
+    "answer": "Searching internet-exposed devices and services by banners and metadata.",
+    "choices": [
+      "Searching internet-exposed devices and services by banners and metadata.",
+      "Performing Kerberos ticket attacks.",
+      "Compiling exploit code.",
+      "Encrypting web traffic."
+    ],
+    "explanation": "Shodan indexes banners, ports, products, versions, and other metadata from public-facing systems.",
+    "command": "shodan search 'apache country:US'",
+    "memoryHook": "Shodan is a search engine for exposed services.",
+    "examTrap": "Finding a host in Shodan is reconnaissance, not proof of compromise.",
+    "tags": [
+      "osint",
+      "internet-exposure",
+      "banners"
+    ]
+  },
+  {
+    "id": "recon-005",
+    "category": "Recon Tools",
+    "difficulty": "Medium",
+    "frontPrompt": "Which record type helps identify mail servers for a domain?",
+    "answer": "MX",
+    "choices": [
+      "MX",
+      "AAAA",
+      "PTR",
+      "SOA"
+    ],
+    "explanation": "MX records list mail exchangers responsible for receiving email for a domain.",
+    "command": "dig example.com MX +short",
+    "memoryHook": "MX = mail exchange.",
+    "examTrap": "TXT may hold SPF/DMARC data, but MX points to mail servers.",
+    "tags": [
+      "dns",
+      "email",
+      "recon"
+    ]
+  },
+  {
+    "id": "web-003",
+    "category": "Web Attacks",
+    "difficulty": "Medium",
+    "frontPrompt": "What does CSRF abuse?",
+    "answer": "A victim's authenticated browser session to perform unwanted actions.",
+    "choices": [
+      "A victim's authenticated browser session to perform unwanted actions.",
+      "A database query parser to dump tables.",
+      "A password hash algorithm to crack credentials.",
+      "A DNS server to transfer zones."
+    ],
+    "explanation": "Cross-site request forgery tricks a logged-in user's browser into submitting a request the user did not intend.",
+    "command": "N/A",
+    "memoryHook": "CSRF rides the victim's session.",
+    "examTrap": "CSRF is not the same as XSS; CSRF does not require script execution in the target site.",
+    "tags": [
+      "csrf",
+      "web",
+      "session"
+    ]
+  },
+  {
+    "id": "web-004",
+    "category": "Web Attacks",
+    "difficulty": "Hard",
+    "frontPrompt": "What is SSRF?",
+    "answer": "Server-side request forgery: making a server send attacker-controlled requests to internal or external resources.",
+    "choices": [
+      "Server-side request forgery: making a server send attacker-controlled requests to internal or external resources.",
+      "Stealing session cookies with browser JavaScript.",
+      "Forcing a victim browser to submit a form.",
+      "Brute-forcing SSH credentials."
+    ],
+    "explanation": "SSRF is dangerous because the vulnerable server may reach internal metadata services, localhost ports, or private networks.",
+    "command": "curl 'https://app/fetch?url=http://169.254.169.254/'",
+    "memoryHook": "SSRF = server does the fetching for you.",
+    "examTrap": "Blocking only public IPs is not enough; private, loopback, DNS rebinding, and metadata addresses matter.",
+    "tags": [
+      "ssrf",
+      "web",
+      "cloud"
+    ]
+  },
+  {
+    "id": "web-005",
+    "category": "Web Attacks",
+    "difficulty": "Medium",
+    "frontPrompt": "Which defense best prevents SQL injection?",
+    "answer": "Parameterized queries / prepared statements",
+    "choices": [
+      "Parameterized queries / prepared statements",
+      "Hiding error messages only",
+      "Using HTTPS",
+      "Compressing responses"
+    ],
+    "explanation": "Prepared statements separate code from data so user input is not interpreted as SQL syntax.",
+    "command": "SELECT * FROM users WHERE id = ?",
+    "memoryHook": "Parameters keep data in its lane.",
+    "examTrap": "HTTPS protects transport, not query construction.",
+    "tags": [
+      "sqli",
+      "defense",
+      "secure-coding"
+    ]
+  },
+  {
+    "id": "web-006",
+    "category": "Web Attacks",
+    "difficulty": "Hard",
+    "frontPrompt": "What vulnerability lets an attacker include or read files through unsafe path handling?",
+    "answer": "Path traversal / local file inclusion",
+    "choices": [
+      "Path traversal / local file inclusion",
+      "Clickjacking",
+      "Pass-the-hash",
+      "Kerberoasting"
+    ],
+    "explanation": "Sequences like ../ may escape an intended directory if paths are not normalized and restricted.",
+    "command": "../../../../etc/passwd",
+    "memoryHook": "Dot-dot-slash walks out of jail.",
+    "examTrap": "Input validation must canonicalize paths; simple substring filters are often bypassed.",
+    "tags": [
+      "lfi",
+      "path-traversal",
+      "web"
+    ]
+  },
+  {
+    "id": "ad-003",
+    "category": "AD/Kerberos",
+    "difficulty": "Medium",
+    "frontPrompt": "What is pass-the-hash?",
+    "answer": "Authenticating with an NTLM hash without knowing the plaintext password.",
+    "choices": [
+      "Authenticating with an NTLM hash without knowing the plaintext password.",
+      "Sending email through an open relay.",
+      "Brute-forcing a WPA handshake.",
+      "Uploading a malicious web shell."
+    ],
+    "explanation": "If NTLM authentication is accepted, the hash can act like a credential for lateral movement.",
+    "command": "psexec.py -hashes LMHASH:NTHASH domain/user@10.0.0.20",
+    "memoryHook": "Hash becomes the password substitute.",
+    "examTrap": "Changing only the user's display name does not invalidate stolen hashes; rotate credentials.",
+    "tags": [
+      "ntlm",
+      "lateral-movement",
+      "credentials"
+    ]
+  },
+  {
+    "id": "ad-004",
+    "category": "AD/Kerberos",
+    "difficulty": "Hard",
+    "frontPrompt": "What is an SPN in Active Directory?",
+    "answer": "A Service Principal Name that maps a service instance to an AD account for Kerberos.",
+    "choices": [
+      "A Service Principal Name that maps a service instance to an AD account for Kerberos.",
+      "A subnet prefix notation used by routers.",
+      "A certificate pinning policy.",
+      "A Windows firewall profile name."
+    ],
+    "explanation": "SPNs let clients request Kerberos tickets for services such as MSSQL or HTTP running under domain accounts.",
+    "command": "setspn -L svc-sql",
+    "memoryHook": "SPN points Kerberos to the service account.",
+    "examTrap": "User accounts with SPNs are prime Kerberoasting targets if passwords are weak.",
+    "tags": [
+      "spn",
+      "kerberos",
+      "active-directory"
+    ]
+  },
+  {
+    "id": "ad-005",
+    "category": "AD/Kerberos",
+    "difficulty": "Medium",
+    "frontPrompt": "Which tool is commonly used to map AD attack paths visually?",
+    "answer": "BloodHound",
+    "choices": [
+      "BloodHound",
+      "Nikto",
+      "Gobuster",
+      "sqlmap"
+    ],
+    "explanation": "BloodHound uses graph relationships to reveal privilege escalation and lateral movement paths in Active Directory.",
+    "command": "bloodhound-python -d domain.local -u user -p pass -c All",
+    "memoryHook": "BloodHound sniffs out AD paths.",
+    "examTrap": "BloodHound findings still need validation and remediation planning.",
+    "tags": [
+      "bloodhound",
+      "active-directory",
+      "attack-paths"
+    ]
+  },
+  {
+    "id": "cloud-003",
+    "category": "Cloud/Containers",
+    "difficulty": "Hard",
+    "frontPrompt": "Why is the cloud metadata service a common SSRF target?",
+    "answer": "It may expose instance identity, tokens, roles, or configuration from a link-local address.",
+    "choices": [
+      "It may expose instance identity, tokens, roles, or configuration from a link-local address.",
+      "It stores all Docker images by default.",
+      "It replaces TLS certificates automatically.",
+      "It only contains public marketing metadata."
+    ],
+    "explanation": "Services such as AWS IMDS can expose temporary credentials if not protected and reachable through SSRF.",
+    "command": "curl http://169.254.169.254/latest/meta-data/",
+    "memoryHook": "Metadata can become credentials.",
+    "examTrap": "IMDSv2 and egress controls reduce risk, but app-side SSRF validation still matters.",
+    "tags": [
+      "cloud",
+      "ssrf",
+      "metadata"
+    ]
+  },
+  {
+    "id": "cloud-004",
+    "category": "Cloud/Containers",
+    "difficulty": "Medium",
+    "frontPrompt": "What Kubernetes file often contains cluster/server/user context for kubectl?",
+    "answer": "kubeconfig",
+    "choices": [
+      "kubeconfig",
+      "Dockerfile",
+      "robots.txt",
+      "shadow"
+    ],
+    "explanation": "A kubeconfig stores cluster endpoints, users, contexts, and authentication details for kubectl.",
+    "command": "kubectl config get-contexts",
+    "memoryHook": "kubeconfig tells kubectl where and who.",
+    "examTrap": "Leaked kubeconfigs can be high-impact credentials, not harmless config files.",
+    "tags": [
+      "kubernetes",
+      "credentials",
+      "containers"
+    ]
+  },
+  {
+    "id": "cloud-005",
+    "category": "Cloud/Containers",
+    "difficulty": "Easy",
+    "frontPrompt": "What Docker command lists running containers?",
+    "answer": "docker ps",
+    "choices": [
+      "docker ps",
+      "docker images",
+      "docker build",
+      "docker pull"
+    ],
+    "explanation": "docker ps shows currently running containers; add -a to include stopped containers.",
+    "command": "docker ps -a",
+    "memoryHook": "ps = process/status list.",
+    "examTrap": "docker images lists local images, not running containers.",
+    "tags": [
+      "docker",
+      "containers",
+      "commands"
+    ]
+  },
+  {
+    "id": "report-003",
+    "category": "Reporting/Documents",
+    "difficulty": "Medium",
+    "frontPrompt": "What is the best remediation wording style?",
+    "answer": "Specific, prioritized, testable actions tied to the affected system and risk.",
+    "choices": [
+      "Specific, prioritized, testable actions tied to the affected system and risk.",
+      "A generic 'fix it soon' note.",
+      "Only vendor marketing links.",
+      "Exploit steps with no defensive guidance."
+    ],
+    "explanation": "Good remediation tells the owner exactly what to change and how to validate the fix.",
+    "command": "N/A",
+    "memoryHook": "Remediation should be a checklist, not a fog machine.",
+    "examTrap": "A patch recommendation should include version/context when possible.",
+    "tags": [
+      "reporting",
+      "remediation",
+      "communication"
+    ]
+  },
+  {
+    "id": "report-004",
+    "category": "Reporting/Documents",
+    "difficulty": "Easy",
+    "frontPrompt": "What does scope define in a pentest?",
+    "answer": "The authorized targets, timeframes, methods, and boundaries for testing.",
+    "choices": [
+      "The authorized targets, timeframes, methods, and boundaries for testing.",
+      "The attacker's favorite tools.",
+      "The final report font size.",
+      "The password cracking wordlist only."
+    ],
+    "explanation": "Scope keeps testing legal, safe, and aligned with business expectations.",
+    "command": "N/A",
+    "memoryHook": "Scope is the fence line.",
+    "examTrap": "Testing outside scope can create legal and operational trouble even if technically possible.",
+    "tags": [
+      "scope",
+      "rules-of-engagement",
+      "planning"
+    ]
+  },
+  {
+    "id": "wireless-003",
+    "category": "Wireless/Social Engineering",
+    "difficulty": "Medium",
+    "frontPrompt": "What does WPA handshake capture enable an attacker to attempt?",
+    "answer": "Offline password cracking against the captured handshake.",
+    "choices": [
+      "Offline password cracking against the captured handshake.",
+      "Instantly reading all encrypted traffic without a key.",
+      "Changing the victim's DNS records.",
+      "Bypassing all MFA systems."
+    ],
+    "explanation": "A captured handshake can be tested against wordlists without repeatedly interacting with the AP.",
+    "command": "aircrack-ng capture.cap -w wordlist.txt",
+    "memoryHook": "Handshake captured, guessing happens offline.",
+    "examTrap": "A strong passphrase makes offline cracking impractical.",
+    "tags": [
+      "wireless",
+      "wpa",
+      "hash-cracking"
+    ]
+  },
+  {
+    "id": "wireless-004",
+    "category": "Wireless/Social Engineering",
+    "difficulty": "Easy",
+    "frontPrompt": "What is tailgating?",
+    "answer": "Following an authorized person into a restricted area without proper authentication.",
+    "choices": [
+      "Following an authorized person into a restricted area without proper authentication.",
+      "Appending data to a log file.",
+      "Capturing Wi-Fi handshakes.",
+      "Running a UDP scan."
+    ],
+    "explanation": "Tailgating exploits human politeness and physical access control weaknesses.",
+    "command": "N/A",
+    "memoryHook": "Tailgating = slipping in behind someone.",
+    "examTrap": "Badges and doors help only when users avoid holding doors for unknown people.",
+    "tags": [
+      "physical-security",
+      "social-engineering",
+      "awareness"
+    ]
+  },
+  {
+    "id": "script-003",
+    "category": "Scripting/Code Interpretation",
+    "difficulty": "Medium",
+    "frontPrompt": "In Bash, what does grep -R 'password' . do?",
+    "answer": "Recursively searches files under the current directory for the text password.",
+    "choices": [
+      "Recursively searches files under the current directory for the text password.",
+      "Changes all passwords in the current directory.",
+      "Starts a reverse shell.",
+      "Lists only hidden files."
+    ],
+    "explanation": "-R tells grep to search recursively through directories.",
+    "command": "grep -R \"api_key\" .",
+    "memoryHook": "grep grabs matching lines.",
+    "examTrap": "Finding a string is not proof it is a valid credential; validate carefully and ethically.",
+    "tags": [
+      "bash",
+      "grep",
+      "code-reading"
+    ]
+  },
+  {
+    "id": "script-004",
+    "category": "Scripting/Code Interpretation",
+    "difficulty": "Hard",
+    "frontPrompt": "What is risky about using eval() on user-controlled input?",
+    "answer": "It can execute attacker-supplied code.",
+    "choices": [
+      "It can execute attacker-supplied code.",
+      "It always encrypts input weakly.",
+      "It blocks all network requests.",
+      "It forces HTTPS downgrade."
+    ],
+    "explanation": "eval treats strings as code, so untrusted input can become arbitrary execution.",
+    "command": "eval(user_input)",
+    "memoryHook": "eval turns text into code. That's dragon country.",
+    "examTrap": "Filtering a few bad words is not a reliable defense against code execution.",
+    "tags": [
+      "secure-coding",
+      "python",
+      "code-execution"
+    ]
+  },
+  {
+    "id": "script-005",
+    "category": "Scripting/Code Interpretation",
+    "difficulty": "Easy",
+    "frontPrompt": "What does HTTP status code 403 usually mean?",
+    "answer": "Forbidden: the server understood the request but refuses authorization.",
+    "choices": [
+      "Forbidden: the server understood the request but refuses authorization.",
+      "Not Found: the resource does not exist.",
+      "OK: the request succeeded.",
+      "Moved Permanently: redirect."
+    ],
+    "explanation": "403 indicates access is denied; authentication or authorization may be insufficient.",
+    "command": "curl -I https://target/admin",
+    "memoryHook": "403 = forbidden door.",
+    "examTrap": "403 is different from 401, which indicates authentication is needed or failed.",
+    "tags": [
+      "http",
+      "status-codes",
+      "web"
+    ]
   }
 ]

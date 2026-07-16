@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.0 - Interactive practice expansion
+
+- Expanded the starter deck from 16 to 39 original PenTest+ study cards across Nmap, recon, web attacks, AD/Kerberos, cloud/containers, reporting, wireless/social engineering, and scripting/code interpretation.
+- Added optional multiple-choice answers to the card schema.
+- Turned Practice mode into an interactive answer-pick flow with immediate correct/trap feedback before the explanation.
+- Added per-card correct/review counters on the card face and updated the mobile copy for the new flow.
+- Verified tests, lint, production GitHub Pages build, manifest, service worker, and required PWA icons.
+
 ## 0.1.1 - GitHub Pages deployment
 
 - Added GitHub Actions workflow to build, test, lint, and deploy the PWA to GitHub Pages.

@@ -49,7 +49,7 @@ export function DeckPage() {
         <p className="font-display text-xs font-bold uppercase tracking-[0.35em] text-neon">Mobile Cyber Flashcards</p>
         <h1 className="font-display text-4xl font-black leading-none text-white sm:text-5xl">PenTest+ Battle Deck</h1>
         <p className="max-w-xl text-sm leading-relaxed text-slate-400">
-          Tap to flip. Swipe right for correct. Swipe left for review. Progress stays local on this device.
+          Pick an answer, reveal the explanation, then swipe right if you owned it or left if it needs another pass. Progress stays local on this device.
         </p>
       </header>
 

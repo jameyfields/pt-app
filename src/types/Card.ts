@@ -16,6 +16,7 @@ export interface BattleCard {
   difficulty: Difficulty
   frontPrompt: string
   answer: string
+  choices?: string[]
   explanation: string
   command?: string
   memoryHook: string

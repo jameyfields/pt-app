@@ -3,8 +3,7 @@ import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 import { appConfig } from './src/config/appConfig'
 
-const githubPagesBase = process.env.GITHUB_PAGES_BASE ?? '/pt-app/'
-const base = process.env.GITHUB_ACTIONS === 'true' ? githubPagesBase : '/'
+const base = process.env.GITHUB_PAGES_BASE ?? (process.env.GITHUB_ACTIONS === 'true' ? '/pt-app/' : '/')
 const withBase = (path: string) => `${base}${path}`.replace(/\/+/g, '/')
 
 export default defineConfig({

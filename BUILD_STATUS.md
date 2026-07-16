@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Phase 1 — Scaffold the application and PWA.
+Phase 3 — Interactive Practice mode and expanded starter deck.
 
 ## Phase checklist
 
@@ -10,8 +10,8 @@ Phase 1 — Scaffold the application and PWA.
 - [x] Phase 1: Configure PWA manifest, service worker, icons, standalone mode, theme color, offline fallback, and update prompt.
 - [x] Phase 1: Add mobile-first app shell with safe-area support and required bottom navigation.
 - [x] Phase 1: Add `npm run test` and initial automated checks.
-- [ ] Phase 2: Create the full card schema and 15-card sample deck.
-- [ ] Phase 3: Build Learn and Practice modes.
+- [x] Phase 2: Create the expanded card schema and 39-card sample deck.
+- [x] Phase 3: Build interactive Learn and Practice card modes.
 - [ ] Phase 4: Build Command Builder.
 - [ ] Phase 5: Add progress tracking and spaced repetition.
 - [ ] Phase 6: Expand to at least 50 original Nmap cards.
@@ -19,13 +19,12 @@ Phase 1 — Scaffold the application and PWA.
 
 ## Last verified commands
 
-Verified successfully for Phase 1:
+Verified successfully for interactive deck expansion:
 
 ```bash
-npm install
 npm run test
 npm run lint
-npm run build
+GITHUB_PAGES_BASE=/pt-app/ npm run build
 ```
 
 PWA artifact verification passed for:
